@@ -1,0 +1,25 @@
+@Given("User is on home page")
+    public void userIsOnHomePage() {
+        //Set drivelocation path
+        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
+        //Maximize driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get(sauceDemo);
+        driver.findElement(By.xpath("//*[@id='header_container']/div[1]/div[2]/div"));
+    }
+
+    @When("User click add to cart button")
+    public void userClickAddToCartButton() {
+        driver.findElement(By.xpath("//*[@id='add-to-cart-sauce-labs-backpack']")).click();
+    }
+
+    @Then("User verify add to cart result")
+    public void userVerifyAddToCartResult() {
+        Duration duration = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='shopping_cart_container']]"))
+        );
+        driver.quit();
+    }
