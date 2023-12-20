@@ -12,6 +12,3 @@ Membuat 4 fitur menggunakan java dan cucumber <br>
 
 4. Fitur Checkout
 ![chekcout](https://github.com/mirvannugraha/saucedemotesting/assets/36405875/fde3892b-438c-4a70-aad0-f7c2cfbaede5)
-
-5. Fitur Logout
-![logout](https://github.com/mirvannugraha/saucedemotesting/assets/36405875/3133d007-2d00-41af-b075-8afc346a1d3b)
